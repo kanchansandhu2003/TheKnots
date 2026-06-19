@@ -1,0 +1,421 @@
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      TheKnots
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <svg viewBox="0 0 160 90" class="heart-logo">
+          <path d="M40 45 C40 25, 60 25, 70 45 C80 25, 100 25, 100 45 C100 65, 75 75, 75 75 C75 75, 50 65, 40 45Z"
+          class="heart-black" transform="rotate(-10 70 50)" />
+          <path d="M70 45 C70 25, 90 25, 100 45 C110 25, 130 25, 130 45 C130 65, 105 75, 105 75 C105 75, 80 65, 70 45Z"
+          class="heart-pink" transform="rotate(10 100 50)" />
+        </svg>
+        <span>
+          TheKnots
+        </span>
+      </div>
+      <!--links-->
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="service.html">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="categories.html">
+            Categories
+          </a>
+        </li>
+        <li>
+          <a href="all_ven.html">
+            Vendors
+          </a>
+        </li>
+        <li>
+          <a href="gallery.html">
+            Gallery
+          </a>
+        </li>
+        <li>
+          <a href="review.html">
+            Review
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <!-- LOGIN btn -->
+      <div class="login-btn">
+        <button onclick="openForm()">
+          Login
+        </button>
+      </div>
+    </nav>
+    <!-- LOGIN POPUP -->
+    <div class="form-popup" id="formPopup">
+      <div class="form-box">
+        <span class="close-btn" onclick="closeForm()">
+          ×
+        </span>
+        <div class="tabs">
+          <button onclick="showLogin()">
+            Login
+          </button>
+          <button onclick="showRegister()">
+            New user
+          </button>
+        </div>
+        <!-- LOGIN form -->
+         <form id="loginForm" onsubmit="return loginAlert()">
+          <h2>
+            Login
+          </h2>
+          <input type="email" placeholder="Email" id="email" required>
+          <input type="password" placeholder="Password" id="pass" required>
+          <button type="submit" onclick="loginAlert()">
+            Login
+          </button>
+        </form>
+        <!-- new user POPUP -->
+        <form id="registerForm" onsubmit="return registerAlert()" style="display:none;">
+          <h2>
+            Sign Up
+          </h2>
+          <input type="text" placeholder="Full Name" id="name" required>
+          <input type="text" placeholder="Phone Number" id="phone" required>
+          <input type="email" placeholder="Email" id="reg-email" required>
+          <input type="password" placeholder="New Password" id="reg-pass" required>
+          <input type="password" placeholder="Confirm Password" id="reg-con" required>
+          <button type="submit" onclick="registerAlert()">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+    <section class="vendors-section">
+      <h1 class="vendors-heading">
+        Wedding Categories
+      </h1>
+      <p class="vendors-subheading">
+        Celebrating Himachal’s charm and traditions, our trusted vendors ensure
+        every wedding detail is perfectly managed.
+      </p>
+      <div class="vendors-cards">
+        <div class="vendors-column">
+          <a href=all_ven.html#vendor-bridal class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/bridal-wear.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Bride Wear
+              </h4>
+              <p>
+                Pahari Wear, Bridal Lehanga,Sarees
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-makeup class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/bridal-makeup.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Makeup
+              </h4>
+              <p>
+                Bridal, Haldi Makeup & Grooming, Family Makeup
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-mehandi class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/bridal-mehandi.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Mehandi
+              </h4>
+              <p>
+                Bridal Mehandi, Family Packup
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-jewellery class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/jewellery.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Jewellery & Accessosries
+              </h4>
+              <p>
+                Flower, Bridal Jewellery
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-decor class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/venue-cat.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Planning & Decor
+              </h4>
+              <p>
+                Wedding Plannings, Decoration
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-photographer class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/photographer.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Photographers
+              </h4>
+              <p>
+                Wedding Photographers, Pre-wedding Photoshoots
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- RIGHT 6 cards -->
+        <div class="vendors-column">
+          <a href=all_ven.html#vendor-groomwear class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/groom-wear.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Groom Wear
+              </h4>
+              <p>
+                Sherwani Dress,Formal Dress
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-groomstylist class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/groom-stylist.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Groom Stylist
+              </h4>
+              <p>
+                Hair & Makeup Stylist, Personal Stylist
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-food class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/food.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Food
+              </h4>
+              <p>
+                Pahari Dhaam, Catering Services, Chaat & Fast Food
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-music class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/dj.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Music & Dance
+              </h4>
+              <p>
+                DJs, Sangeet Choreography,Music bands
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-venue class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/kasol-dest3.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                Venue
+              </h4>
+              <p>
+                Hills Destination,Banquet Halls
+              </p>
+            </div>
+          </a>
+          <a href=all_ven.html#vendor-invites class="vendors-card">
+            <div class="vendors-img">
+              <img src="image/invite.jpg" alt="Makeup">
+            </div>
+            <div class="vendors-text">
+              <h4>
+                E-Invites
+              </h4>
+              <p>
+                Invitation Cards, E-Invites, Hard Cards
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="vendors-info">
+          <div class="vendors-info-content">
+            <p>
+              Weddings in Himachal Pradesh are a perfect blend of natural beauty and
+              rich traditions. From the serene hilltop venues to the lush green valleys
+              and charming local settings, every wedding here becomes an unforgettable
+              experience. Thanks to our carefully selected vendors, every detail – from
+              bridal makeup, mehendi decorations, pre-wedding photography, venue arrangements,
+              to customized e-invites – is perfectly managed. Whether you dream of a
+              royal banquet or a picturesque hilltop celebration, our vendors ensure
+              that your special day is seamless, magical, and truly memorable. All of
+              this is made possible only because of their expertise and dedication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    < <!-- Footer section -->
+      <footer class="footer">
+        <!-- footer TOP -->
+        <div class="footer-top">
+          <h2 class="footer-logo">
+            TheKnots
+          </h2>
+          <p>
+            Your one-stop destination to plan your dream wedding with elegance and
+            ease.
+          </p>
+        </div>
+        <!-- footer mid -->
+        <div class="footer-main">
+          <!-- footer LEFT -->
+          <div class="footer-col">
+            <h3>
+              Contact Us
+            </h3>
+            <p>
+              <strong>
+                Address:
+              </strong>
+              Shimla, Himachal Pradesh, India
+            </p>
+            <p>
+              <strong>
+                Phone:
+              </strong>
+              +91 9876543210
+            </p>
+          </div>
+          <!-- foooter CENTER -->
+          <div class="footer-col">
+            <h3>
+              Wedding Services
+            </h3>
+            <a href="#">
+              Makeup
+            </a>
+            <a href="#">
+              Venue
+            </a>
+            <a href="#">
+              Invites
+            </a>
+            <a href="#">
+              Photography
+            </a>
+            <a href="#">
+              Tent
+            </a>
+            <a href="#">
+              Mehendi
+            </a>
+          </div>
+          <!-- footer RIGHT -->
+          <div class="footer-col">
+            <h3>
+              Follow Us
+            </h3>
+            <a href="#">
+              <i class="fab fa-facebook-f">
+              </i>
+              Facebook
+            </a>
+            <a href="#">
+              <i class="fab fa-twitter">
+              </i>
+              Twitter
+            </a>
+            <a href="#">
+              <i class="fab fa-pinterest-p">
+              </i>
+              Pinterest
+            </a>
+            <a href="#">
+              <i class="fab fa-instagram">
+              </i>
+              Instagram
+            </a>
+            <a href="#">
+              <i class="fab fa-youtube">
+              </i>
+              YouTube
+            </a>
+          </div>
+        </div>
+        <!-- footer BOTTOM -->
+        <div class="footer-bottom">
+          <p>
+            © 2026 TheKnots. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+  </body>
+  <button id="scrollTopBtn">
+    ⬆
+  </button>
+  <button id="scrollBottomBtn">
+    ⬇
+  </button>
+  <div id="vendorSuccessMsg" class="vendor-success-msg">
+    Your booking has been done, you will receive a call soon 😊
+  </div>
+  <script src="script.js">
+  </script>
+  <div class="image-popup" id="imagePopup">
+    <span class="close-btn" onclick="closePopup()">
+      &times;
+    </span>
+    <img id="popupImg">
+  </div>
+  <div id="topPopup" class="top-popup">
+  </div>
+
+</html>

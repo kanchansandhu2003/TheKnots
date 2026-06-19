@@ -1,0 +1,295 @@
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      TheKnots
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <svg viewBox="0 0 160 90" class="heart-logo">
+          <path d="M40 45 C40 25, 60 25, 70 45 C80 25, 100 25, 100 45 C100 65, 75 75, 75 75 C75 75, 50 65, 40 45Z"
+          class="heart-black" transform="rotate(-10 70 50)" />
+          <path d="M70 45 C70 25, 90 25, 100 45 C110 25, 130 25, 130 45 C130 65, 105 75, 105 75 C105 75, 80 65, 70 45Z"
+          class="heart-pink" transform="rotate(10 100 50)" />
+        </svg>
+        <span>
+          TheKnots
+        </span>
+      </div>
+      <!--links-->
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="service.html">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="categories.html">
+            Categories
+          </a>
+        </li>
+        <li>
+          <a href="all_ven.html">
+            Vendors
+          </a>
+        </li>
+        <li>
+          <a href="gallery.html">
+            Gallery
+          </a>
+        </li>
+        <li>
+          <a href="review.html">
+            Review
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <!-- LOGIN btn -->
+      <div class="login-btn">
+        <button onclick="openForm()">
+          Login
+        </button>
+      </div>
+    </nav>
+    <!-- LOGIN POPUP -->
+    <div class="form-popup" id="formPopup">
+      <div class="form-box">
+        <span class="close-btn" onclick="closeForm()">
+          ×
+        </span>
+        <div class="tabs">
+          <button onclick="showLogin()">
+            Login
+          </button>
+          <button onclick="showRegister()">
+            New user
+          </button>
+        </div>
+        <!-- LOGIN form -->
+       <form id="loginForm" onsubmit="return loginAlert()">
+          <h2>
+            Login
+          </h2>
+          <input type="email" placeholder="Email" id="email" required>
+          <input type="password" placeholder="Password" id="pass" required>
+          <button type="submit" onclick="loginAlert()">
+            Login
+          </button>
+        </form>
+        <!-- new user POPUP -->
+        <form id="registerForm" onsubmit="return registerAlert()" style="display:none;">
+          <h2>
+            Sign Up
+          </h2>
+          <input type="text" placeholder="Full Name" id="name" required>
+          <input type="text" placeholder="Phone Number" id="phone" required>
+          <input type="email" placeholder="Email" id="reg-email" required>
+          <input type="password" placeholder="New Password" id="reg-pass" required>
+          <input type="password" placeholder="Confirm Password" id="reg-con" required>
+          <button type="submit" onclick="registerAlert()">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+    <section class="contact-page">
+      <h2>
+        Contact Us
+      </h2>
+      <div class="contact-container">
+        <!-- LEFT SIDE -->
+        <div class="contact-left">
+          <div class="contact-box">
+            <h3>
+              <i class="fa fa-phone" style="color:black;">
+              </i>
+              Phone
+            </h3>
+            <p>
+              +91 98765 43210
+            </p>
+          </div>
+          <div class="contact-box">
+            <h3>
+              <i class="fa-brands fa-whatsapp" style="color:green;">
+              </i>
+              WhatsApp
+            </h3>
+            <p>
+              +91 98765 43210
+            </p>
+          </div>
+          <div class="contact-box">
+            <h3>
+              <i class="fa fa-envelope" style="color:#b76e70;">
+              </i>
+              Email
+            </h3>
+            <p>
+              theknots@gmail.com
+            </p>
+          </div>
+          <div class="contact-box">
+            <h3>
+              <i class="fa fa-location-dot" style="color:gray;">
+              </i>
+              Location
+            </h3>
+            <p>
+              Shimla, Himachal Pradesh
+            </p>
+          </div>
+          <!-- MAP -->
+          <iframe src="https://maps.google.com/maps?q=shimla&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          class="map">
+          </iframe>
+        </div>
+        <!-- RIGHT SIDE -->
+        <form class="contact-right" onsubmit="return sendMessage()">
+          <h3>
+            Get In Touch
+          </h3>
+          <input type="email" id="contact-email" placeholder="Your Email" required>
+          <textarea id="contact-message" placeholder="Your Message" required></textarea>
+          <button type= "submit" onclick="sendMessage()" >
+            Send Now
+          </button>
+        </form>
+      </div>
+    </section>
+    <!-- Footer section -->
+    <footer class="footer">
+      <!-- footer TOP -->
+      <div class="footer-top">
+        <h2 class="footer-logo">
+          TheKnots
+        </h2>
+        <p>
+          Your one-stop destination to plan your dream wedding with elegance and
+          ease.
+        </p>
+      </div>
+      <!-- footer mid -->
+      <div class="footer-main">
+        <!-- footer LEFT -->
+        <div class="footer-col">
+          <h3>
+            Contact Us
+          </h3>
+          <p>
+            <strong>
+              Address:
+            </strong>
+            Shimla, Himachal Pradesh, India
+          </p>
+          <p>
+            <strong>
+              Phone:
+            </strong>
+            +91 9876543210
+          </p>
+        </div>
+        <!-- foooter CENTER -->
+        <div class="footer-col">
+          <h3>
+            Wedding Services
+          </h3>
+          <a href="#">
+            Makeup
+          </a>
+          <a href="#">
+            Venue
+          </a>
+          <a href="#">
+            Invites
+          </a>
+          <a href="#">
+            Photography
+          </a>
+          <a href="#">
+            Tent
+          </a>
+          <a href="#">
+            Mehendi
+          </a>
+        </div>
+        <!-- footer RIGHT -->
+        <div class="footer-col">
+          <h3>
+            Follow Us
+          </h3>
+          <a href="#">
+            <i class="fab fa-facebook-f">
+            </i>
+            Facebook
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter">
+            </i>
+            Twitter
+          </a>
+          <a href="#">
+            <i class="fab fa-pinterest-p">
+            </i>
+            Pinterest
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram">
+            </i>
+            Instagram
+          </a>
+          <a href="#">
+            <i class="fab fa-youtube">
+            </i>
+            YouTube
+          </a>
+        </div>
+      </div>
+      <!-- footer BOTTOM -->
+      <div class="footer-bottom">
+        <p>
+          © 2026 TheKnots. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <button id="scrollTopBtn">
+    ⬆
+  </button>
+  <button id="scrollBottomBtn">
+    ⬇
+  </button>
+  <script src="script.js">
+  </script>
+  <div class="image-popup" id="imagePopup">
+    <span class="close-btn" onclick="closePopup()">
+      &times;
+    </span>
+    <img id="popupImg">
+  </div>
+  <div id="topPopup" class="top-popup"></div>
+
+</html>
