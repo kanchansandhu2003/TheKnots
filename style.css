@@ -378,12 +378,12 @@
 }
 /* SERVICE Background imagess */
 .service-card:nth-child(1) {
-  background-images:url("images/bride-service.jpg");
+  background-image:url("images/bride-service.jpg");
   background-size:cover;
   background-position:center 5%;
 }
 .service-card:nth-child(2) {
-  background-images:url("images/groom-service.jpg");
+  background-image:url("images/groom-service.jpg");
   background-size:cover;
   background-position:center 53%;
 }
