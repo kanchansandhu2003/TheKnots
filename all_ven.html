@@ -1,0 +1,1948 @@
+<html lang="en">
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+      TheKnots
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  </head>
+  
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="logo">
+        <svg viewBox="0 0 160 90" class="heart-logo">
+          <path d="M40 45 C40 25, 60 25, 70 45 C80 25, 100 25, 100 45 C100 65, 75 75, 75 75 C75 75, 50 65, 40 45Z"
+          class="heart-black" transform="rotate(-10 70 50)" />
+          <path d="M70 45 C70 25, 90 25, 100 45 C110 25, 130 25, 130 45 C130 65, 105 75, 105 75 C105 75, 80 65, 70 45Z"
+          class="heart-pink" transform="rotate(10 100 50)" />
+        </svg>
+        <span>
+          TheKnots
+        </span>
+      </div>
+      <!--links-->
+      <ul class="nav-links">
+        <li>
+          <a href="index.html">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="about.html">
+            About
+          </a>
+        </li>
+        <li>
+          <a href="service.html">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="categories.html">
+            Categories
+          </a>
+        </li>
+        <li>
+          <a href="all_ven.html">
+            Vendors
+          </a>
+        </li>
+        <li>
+          <a href="gallery.html">
+            Gallery
+          </a>
+        </li>
+        <li>
+          <a href="review.html">
+            Review
+          </a>
+        </li>
+        <li>
+          <a href="contact.html">
+            Contact
+          </a>
+        </li>
+      </ul>
+      <!-- LOGIN btn -->
+      <div class="login-btn">
+        <button onclick="openForm()">
+          Login
+        </button>
+      </div>
+    </nav>
+    <!-- LOGIN POPUP -->
+    <div class="form-popup" id="formPopup">
+      <div class="form-box">
+        <span class="close-btn" onclick="closeForm()">
+          ×
+        </span>
+        <div class="tabs">
+          <button onclick="showLogin()">
+            Login
+          </button>
+          <button onclick="showRegister()">
+            New user
+          </button>
+        </div>
+        <!-- LOGIN form -->
+         <form id="loginForm" onsubmit="return loginAlert()">
+          <h2>
+            Login
+          </h2>
+          <input type="email" placeholder="Email" id="email" required>
+          <input type="password" placeholder="Password" id="pass" required>
+          <button type="submit" onclick="loginAlert()">
+            Login
+          </button>
+        </form>
+        <!-- new user POPUP -->
+        <form id="registerForm" onsubmit="return registerAlert()" style="display:none;">
+          <h2>
+            Sign Up
+          </h2>
+          <input type="text" placeholder="Full Name" id="name" required>
+          <input type="text" placeholder="Phone Number" id="phone" required>
+          <input type="email" placeholder="Email" id="reg-email" required>
+          <input type="password" placeholder="New Password" id="reg-pass" required>
+          <input type="password" placeholder="Confirm Password" id="reg-con" required>
+          <button type="submit" onclick="registerAlert()">
+            Register
+          </button>
+        </form>
+      </div>
+    </div>
+    <!-- BRIDAL WEAR SECTION-->
+    <section id="vendor-bridal" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Bridal Wear
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/gallery8.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="imagess/lehanga1.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Royal Bridal Wears
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Shimla, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹25,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/lehanga2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Elegant Brides
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹18,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/lehanga3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Dream Wedding Wear
+            </h4>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala
+            </p>
+            <p class="vendor-price">
+              ₹20,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/lehanga4-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga4-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga4-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Kaanch Designs
+            </h4>
+            <p class="vendor-rating">
+              5.0
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Hamirpur, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹40,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/lehanga5-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga5-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga5-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Sabhyasachi
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kangra, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹1,58,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/lehanga6-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga6-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/lehanga6-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Libas Wear
+            </h4>
+            <p class="vendor-rating">
+              4.9
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹30,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--MAKEUP SECTION -->
+    <section id="vendor-makeup" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Bridal Makeup
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/makeup3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/makeup1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/makeup1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Makeup BY Abhishek
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Hamirpur, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹35,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/makeup2-1.jpg" class="vendor-slide  active " onclick="vendorOpenimages(this)">
+            <img src="images/makeup2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/makeup2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Hair Shakkerrs Makeup
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Una, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹35,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/makeup6-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/makeup3-2.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/makeup3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Aditi Makeup Artistry
+            </h4>
+            <p class="vendor-rating">
+              4.2
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Hamirpur, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹18,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/makeup4-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/makeup4-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/makeup4-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Face 2 Face Saloon
+            </h4>
+            <p class="vendor-rating">
+              4.4
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Bilaspur, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹25,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/makeup5-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/makeup5-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/makeup5-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Hills Makeup
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kasol, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹14,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/makeup6-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/makeup6-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/makeup6-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Shimmer & Snow Bridal Studio
+            </h4>
+            <p class="vendor-rating">
+              4.1
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Shimla, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹25,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BRIDAL MEHANDI SECTION-->
+    <section id="vendor-mehandi" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Bridal Mehandi
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/mehandi1-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/mehandi1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/mehandi1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Royal Mehandi
+            </h4>
+            <p class="vendor-rating">
+              4.9
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹5,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/mehandi2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/mehandi2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/mehandi2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Harshita Mehandi Artist
+            </h4>
+            <p class="vendor-rating">
+              4.5
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kasol, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹18,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/mehandi3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/mehandi3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/mehandi3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Henna Mehandi
+            </h4>
+            <p class="vendor-rating">
+              4.3
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Mandi, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹8,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- INVITE SECTION-->
+    <section id="vendor-invites" class="vendor-section">
+      <h2 class="vendor-section-title">
+        E-Invites
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/invite1-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/invite1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/invite1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Wedding Scroll Studio
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kasol, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹8,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/invite2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/invite2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/invite2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Himlayan Invite Tales
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Hamirpur, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹20,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/invite3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/invite3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/invite2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              EverAfter Digital Invites
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Una, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹18,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- DECOR SECTION-->
+    <section id="vendor-decor" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Decoration And Tenting
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/decor1-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/decor1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/decor1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Dev Bhoomi Tent & Decor
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Shimla, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹1,25,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/decor2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/decor2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/decor2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Royal Pahari Events & Tent
+            </h4>
+            <p class="vendor-rating">
+              3.9
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹1,18,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/decor3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/decor3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/decor3-3.jpg" class="vendor-slide onclick=" vendorOpenimages(this)
+            "">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Himalayan Dream Wedding PLanner
+            </h4>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala
+            </p>
+            <p class="vendor-price">
+              ₹2,00,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Photography SECTION-->
+    <section id="vendor-photographer" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Photography
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/photo1-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/photo1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/photo1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Sharma Studio
+            </h4>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Shimla, Himachal
+            </p>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-price">
+              ₹48,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/photo2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/photo2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/photo2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Himalayan Frame Studio
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹58,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/photo3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/photo3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/photo3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Noor Lens Creations
+            </h4>
+            <p class="vendor-rating">
+              4.9
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kangra,Himachal
+            </p>
+            <p class="vendor-price">
+              ₹40,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- GROOM WEAR SECTION-->
+    <section id="vendor-groomwear" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Groom Wears
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/groomwear1-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Royal Pahadi Groom Couture
+            </h4>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kasol, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹18,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/groomwear2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              The Groom's Wears
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹10,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/groom-wear.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Dream's MensWear
+            </h4>
+            <p class="vendor-rating">
+              4.4v
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala
+            </p>
+            <p class="vendor-price">
+              ₹12,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- GROOM Stylist SECTION-->
+    <section id="vendor-groomstylist" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Groom Stylist
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/groomwear1-2.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear1-1.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Style and Care Saloon
+            </h4>
+            <p class="vendor-rating">
+              4.4
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Hamirpur, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹5,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/groomwear2-2.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear2-1.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Hair Shakkers Stylistes
+            </h4>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Hamirpur, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹8,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/groomwear3-2.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear2-1.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/groomwear3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Face2face Mens Stylist
+            </h4>
+            <p class="vendor-rating">
+              4.2
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala
+            </p>
+            <p class="vendor-price">
+              ₹4,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOD SECTION-->
+    <section id="vendor-food" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Catering Vendors
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/food1-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/food1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/food1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Pahadi Dham Caterers
+            </h4>
+            <p class="vendor-rating">
+              5.0
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹2500 Per Plate
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/food2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/food2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/food2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Taste & Tradition Caterers
+            </h4>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kullu, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹2000 Per Plate
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/food3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/food3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/food3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Pahadi Jayka Caterers
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala
+            </p>
+            <p class="vendor-price">
+              2500 Per Plate
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- MUSIC SECTION-->
+    <section id="vendor-music" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Music & Dance
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/dj.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/dj1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/dj1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Pahadi Beats Djs & Band
+            </h4>
+            <p class="vendor-rating">
+              4.9
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kangra, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹30,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/dj2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/dj2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/dj2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Himachali Bands
+            </h4>
+            <p class="vendor-rating">
+              4.7
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹28,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/dj3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/dj3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/dj3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Dj Beats and Pleats
+            </h4>
+            <p class="vendor-rating">
+              4.4
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala
+            </p>
+            <p class="vendor-price">
+              ₹20,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- BRIDAL JEWELLERY SECTION-->
+    <section id="vendor-jewellery" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Jewellery & Accessories
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/jewellery1-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/jewellery1-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/jewellery1-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Sanjay Bridal Jewellers
+            </h4>
+            <p class="vendor-rating">
+              5.0
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Hamirpur, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹1,00,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/jewellery2-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/jewellery2-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/jewellery2-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              kullu velley Jewels
+            </h4>
+            <p class="vendor-rating">
+              4.9
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kullu, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹88,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/jewellery3-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/jewellery3-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/jewellery3-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Dream bridal jewellery
+            </h4>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala
+            </p>
+            <p class="vendor-price">
+              ₹20,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- VENUE SECTION-->
+    <section <section id="vendor-venue" class="vendor-section">
+      <h2 class="vendor-section-title">
+        Venues & Destinations
+      </h2>
+      <div class="vendor-grid">
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/shimla-dest3.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/shimla-dest2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/shimla-dest4.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Shimla Hills
+            </h4>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Shimla, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹10,00,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/manali-dest4.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/manali-dest2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/manali-dest3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Manali Feels
+            </h4>
+            <p class="vendor-rating">
+              4.9
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹15,00,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/kasol-dest3.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/kasol-dest2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/kasol-dest4.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Kasol Riverscapes
+            </h4>
+            <p class="vendor-rating">
+              5.0
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kasol, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹20,00,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 1 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/dhrmshala-dest2.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/dhrmshala-dest3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/dhrmshala-dest4.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Dharamshala Vista
+            </h4>
+            <p class="vendor-rating">
+              4.8
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Dharamshala, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹21,00,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 2 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/dest5-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/dest5-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/dest5-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Chail Cottage
+            </h4>
+            <p class="vendor-rating">
+              4.6
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Kullu, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹8,00,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+        <!-- Vendor 3 -->
+        <div class="vendor-card">
+          <div class="vendor-slider">
+            <img src="images/dest6-1.jpg" class="vendor-slide active" onclick="vendorOpenimages(this)">
+            <img src="images/dest6-2.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <img src="images/dest6-3.jpg" class="vendor-slide" onclick="vendorOpenimages(this)">
+            <button class="vendor-prev" onclick="vendorPrevSlide(this)">
+              ❮
+            </button>
+            <button class="vendor-next" onclick="vendorNextSlide(this)">
+              ❯
+            </button>
+          </div>
+          <div class="vendor-info">
+            <h4>
+              Mandi Retreat
+            </h4>
+            <p class="vendor-rating">
+              4.9
+              <span class="star">
+                ★
+              </span>
+            </p>
+            <p class="vendor-location">
+              <i class="fa-solid fa-location-dot">
+              </i>
+              Manali, Himachal
+            </p>
+            <p class="vendor-price">
+              ₹20,000 onwards
+            </p>
+            <button class="vendor-book-btn" onclick="vendorbookNow()">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer section -->
+    <footer class="footer">
+      <!-- footer TOP -->
+      <div class="footer-top">
+        <h2 class="footer-logo">
+          TheKnots
+        </h2>
+        <p>
+          Your one-stop destination to plan your dream wedding with elegance and
+          ease.
+        </p>
+      </div>
+      <!-- footer mid -->
+      <div class="footer-main">
+        <!-- footer LEFT -->
+        <div class="footer-col">
+          <h3>
+            Contact Us
+          </h3>
+          <p>
+            <strong>
+              Address:
+            </strong>
+            Shimla, Himachal Pradesh, India
+          </p>
+          <p>
+            <strong>
+              Phone:
+            </strong>
+            +91 9876543210
+          </p>
+        </div>
+        <!-- foooter CENTER -->
+        <div class="footer-col">
+          <h3>
+            Wedding Services
+          </h3>
+          <a href="#">
+            Makeup
+          </a>
+          <a href="#">
+            Venue
+          </a>
+          <a href="#">
+            Invites
+          </a>
+          <a href="#">
+            Photography
+          </a>
+          <a href="#">
+            Tent
+          </a>
+          <a href="#">
+            Mehendi
+          </a>
+        </div>
+        <!-- footer RIGHT -->
+        <div class="footer-col">
+          <h3>
+            Follow Us
+          </h3>
+          <a href="#">
+            <i class="fab fa-facebook-f">
+            </i>
+            Facebook
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter">
+            </i>
+            Twitter
+          </a>
+          <a href="#">
+            <i class="fab fa-pinterest-p">
+            </i>
+            Pinterest
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram">
+            </i>
+            Instagram
+          </a>
+          <a href="#">
+            <i class="fab fa-youtube">
+            </i>
+            YouTube
+          </a>
+        </div>
+      </div>
+      <!-- footer BOTTOM -->
+      <div class="footer-bottom">
+        <p>
+          © 2026 TheKnots. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+  <div id="vendorimagesPopup" class="vendor-img-popup" onclick="vendoroutsideClick(event)">
+    <span class="vendor-close" onclick="vendorCloseimages()">
+      ✖
+    </span>
+    <img id="vendorPopupImg">
+  </div>
+  <div id="vendorSuccessMsg" class="vendor-success-msg">
+    Your booking has been done, you will receive a call soon ✅
+  </div>
+  <button id="scrollTopBtn">
+    ⬆
+  </button>
+  <button id="scrollBottomBtn">
+    ⬇
+  </button>
+  <script src="script.js">
+  </script>
+  <div id="topPopup" class="top-popup">
+  </div>
+
+</html>
